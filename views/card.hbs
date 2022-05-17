@@ -1,0 +1,42 @@
+<h1>Корзина</h1>
+<div id='card'>
+    {{#if courses.length}}
+        <table>
+            <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Количество</th>
+                    <th>Цена</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each courses}}
+                    <tr>
+                        <td>{{title}}</td>
+                        <td>{{count}}</td>
+                        <td>{{price}}</td>
+                        <td>
+                            <button
+                                class='btn btn-small remove-btn'
+                                data-id='{{_id}}'
+                                data-csrf={{@root.csrf}}
+                            >Удалть</button>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <p>
+            <strong>Цена: </strong>
+            <span class='price'>{{price}}</span>
+        </p>
+        <form action='/orders' method='post'>
+            <input type='hidden' name='_csrf' value={{csrf}} />
+
+            <button class='btn btn-small' type='submit'>Заказы</button>
+        </form>
+    {{else}}
+        <p>Корзина пуста</p>
+    {{/if}}
+</div>

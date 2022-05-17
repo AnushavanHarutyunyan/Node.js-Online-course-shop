@@ -1,0 +1,53 @@
+<h1 class='h1_courses'>Курсы</h1>
+
+{{#if courses.length}}
+    <div class='container d-flex'>
+        {{#each courses}}
+            <div class='cards'>
+                <div class='col offset-s12'>
+                    <div class='card blue-grey darken-1 item'>
+                        <div class='card-content white-text'>
+                            <span class='card-title'>{{title}}</span>
+                            <div class='img_group'>
+                                <img
+                                    class='card_img'
+                                    src='{{img}}'
+                                    alt='{{title}}'
+                                />
+                            </div>
+                            <p class='price'>{{price}}</p>
+                        </div>
+                        <div class='card-action'>
+                            <a href='/courses/{{id}}'>This is course</a>
+                            {{#if @root.isAuth}}
+                                {{#ifeq userId._id @root.userId}}
+                                    <a
+                                        href='/courses/{{id}}/edit?allow=true'
+                                    >Edit this course</a>
+                                {{/ifeq}}
+                                <form action='/card/add' method='post'>
+                                    <button
+                                        type='submit'
+                                        class='btn btn-primary'
+                                    >Buy</button>
+                                    <input
+                                        type='hidden'
+                                        name='id'
+                                        value='{{id}}'
+                                    />
+                                    <input
+                                        type='hidden'
+                                        name='_csrf'
+                                        value={{@root.csrf}}
+                                    />
+                                </form>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+{{else}}
+    <p>Course Not Found</p>
+{{/if}}

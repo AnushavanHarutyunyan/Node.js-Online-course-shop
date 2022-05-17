@@ -1,0 +1,60 @@
+.container {
+    width: 95%;
+}
+.nav-wrapper {
+    padding: 0 2rem;
+}
+.card_img {
+    width: 45%;
+}
+.cards {
+    width: 40%;
+}
+.d-flex {
+    display: flex;
+}
+.item {
+    margin-right: 1.5rem;
+}
+.price {
+    font-size: 1.5rem;
+}
+.h1_courses {
+    text-align: center;
+    font-size: 6rem;
+}
+.img_group {
+    width: 200px;
+    height: 90px;
+    margin: 0 auto;
+}
+.card-content {
+    text-align: center;
+}
+.card-action {
+    display: flex;
+    align-items: center;
+}
+.form_input {
+    margin-bottom: 2rem;
+}
+.auth {
+    padding-top: 1rem;
+}
+.error {
+    padding: 0.5rem;
+    margin: 1.5rem auto;
+    border-radius: 15px;
+    background-color: crimson;
+    color: wheat;
+    text-align: center;
+    width: 50%;
+}
+.alert {
+    color: red;
+    font-size: 16px;
+}
+.avatar {
+    max-width: 300px;
+    height: auto;
+}
