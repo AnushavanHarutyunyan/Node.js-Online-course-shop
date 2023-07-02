@@ -58,3 +58,21 @@
     max-width: 300px;
     height: auto;
 }
+
+@media only screen and (max-width: 850px) {
+    .curseswrap {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .img_group {
+        width: 150px;
+        height: 50px;
+        margin: 15px auto;
+    }
+    .card-content{
+        padding: 16px !important;
+    }
+}
