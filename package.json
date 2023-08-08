@@ -29,6 +29,8 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "nodemon": "^1.18.11"
+    "nodemon": "^1.18.11",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   }
 }
