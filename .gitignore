@@ -1,2 +1,5 @@
 node_modules
 # keys/keys.dev.js
+functions
+# Local Netlify folder
+.netlify
